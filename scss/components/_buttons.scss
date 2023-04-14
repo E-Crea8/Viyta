@@ -1,0 +1,248 @@
+@use "./colors" as *;
+@use "./media-queries" as *;
+
+.primary-btn a:link,
+.primary-btn a:visited {
+  display: inline-block;
+  padding: 1.2rem 4rem;
+  color: $white;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  background: $primary;
+  border-radius: 100px;
+  text-decoration: none;
+  border: 0;
+  font-family: "Aileron", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.primary-btn a:hover,
+.primary-btn a:active {
+  background: $secondary;
+}
+
+a.primary-btn:link,
+a.primary-btn:visited {
+  display: inline-block;
+  padding: 1.2rem 4rem;
+  color: $white;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  background: $primary;
+  border-radius: 100px;
+  text-decoration: none;
+  border: 0;
+  font-family: "Aileron", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+a.primary-btn:hover,
+a.primary-btn:active {
+  background: $secondary;
+}
+
+a.border-grey-btn:link,
+a.border-grey-btn:visited {
+  display: inline-block;
+  padding: 1.2rem 4rem;
+  color: $dark;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  background: transparent;
+  border-radius: 100px;
+  text-decoration: none;
+  border: 1px solid $grey;
+  font-family: "Aileron", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+a.border-grey-btn:hover,
+a.border-grey-btn:active {
+  background: $secondary;
+}
+
+a.btn-no-bg:link,
+a.btn-no-bg:visited {
+  color: $dark;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  background: transparent;
+  text-decoration: underline;
+  font-family: "Aileron", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: block;
+}
+
+a.btn-no-bg:hover,
+a.btn-no-bg:active {
+  color: $primary;
+}
+
+// Woocommerce Add to Cart Button
+ul.products li.product .button {
+  display: inline-block;
+}
+
+a.button.add_to_cart_button:link,
+a.button.add_to_cart_button:visited {
+  display: inline-block;
+  padding: 1.4rem 2.8rem;
+  color: $white;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  background: $primary;
+  border-radius: 100px;
+  text-decoration: none;
+  border: 0;
+  font-family: "Aileron", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+a.button.add_to_cart_button:hover,
+a.button.add_to_cart_button:active {
+  background: $secondary;
+}
+
+a.add_to_cart_button:link,
+a.add_to_cart_button:visited {
+  display: inline-block;
+  padding: 1.4rem 2.8rem;
+  color: $white;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  background: $primary;
+  border-radius: 100px;
+  text-decoration: none;
+  border: 0;
+  font-family: "Aileron", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+a.add_to_cart_button:hover,
+a.add_to_cart_button:active {
+  background: $secondary;
+}
+
+button.add_to_cart_button {
+  display: inline-block;
+  padding: 1.4rem 2.8rem;
+  color: $white;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  background: $primary;
+  border-radius: 100px;
+  text-decoration: none;
+  border: 0;
+  font-family: "Aileron", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button.add_to_cart_button:hover {
+  background: $secondary;
+}
+
+button.single_add_to_cart_button {
+  display: inline-block;
+  padding: 1.4rem 2.8rem;
+  color: $white;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  background: $primary;
+  border-radius: 100px;
+  text-decoration: none;
+  border: 0;
+  font-family: "Aileron", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button.single_add_to_cart_button:hover {
+  background: $secondary;
+}
+
+// Slick Prev Button
+.slick-prev {
+  left: 17px;
+  z-index: 999;
+
+  &::before {
+    content: url("https://woocommerce-869479-3348306.cloudwaysapps.com/wp-content/uploads/2023/03/arrow-left-icon.svg");
+    display: flex;
+
+    background: $dark;
+
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+// Slick Next Button
+.slick-next {
+  right: 10px;
+
+  &::before {
+    content: url("https://woocommerce-869479-3348306.cloudwaysapps.com/wp-content/uploads/2023/03/arrow-right-icon.svg");
+    display: flex;
+
+    background: $dark;
+
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.slick-next,
+.slick-prev {
+  font-size: 0;
+  line-height: 0;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: 0;
+  background: $dark !important;
+}
+.slick-dots,
+.slick-next,
+.slick-prev {
+  position: absolute;
+  display: block;
+  padding: 3.2rem 2.2rem;
+  border-radius: 100px;
+}
+
+button.slick-prev.slick-arrow {
+  height: 6.4rem;
+  width: 6.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.slick-next.slick-arrow {
+  height: 6.4rem;
+  width: 6.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

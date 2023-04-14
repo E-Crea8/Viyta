@@ -1,0 +1,130 @@
+// Testimonial Section Section styles here
+
+@use "./../components/colors" as *;
+@use "./../components/media-queries" as *;
+
+.testimoial-section {
+  .testimonial-slider {
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 28px;
+      color: $dark;
+      font-size: 1.6rem;
+      max-width: 48rem;
+      margin: auto;
+      text-align: center;
+    }
+
+    .testimonial-slick-slider {
+      // display: flex;
+      // gap: 6.8rem;
+      .slick-prev {
+        left: 100px;
+        z-index: 999;
+      }
+
+      .slick-next {
+        right: 100px;
+      }
+
+      .testimonial-content {
+        margin: 0 auto;
+        max-width: 58rem;
+        text-align: center;
+        margin-right: 6.8rem;
+        opacity: 0.1;
+
+        img {
+          margin: 0 auto;
+          margin-bottom: 1.6rem;
+        }
+
+        p {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.6rem;
+          line-height: 28px;
+          color: $dark;
+          font-size: 1.6rem;
+          max-width: 48rem;
+          margin: auto;
+          text-align: center;
+          padding-bottom: 2.4rem;
+          border-bottom: 2px solid $grey;
+          margin-bottom: 1.3rem;
+          opacity: 0.7;
+        }
+
+        .user-details {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          margin: auto;
+          justify-content: center;
+
+          img {
+            margin: 0;
+          }
+
+          span {
+            display: inline-block;
+            font-weight: 600;
+            font-size: 1.4rem;
+            line-height: 20px;
+            color: $dark;
+          }
+        }
+      }
+
+      .testimonial-content.slick-current {
+        margin: 0 auto;
+        max-width: 58rem;
+        text-align: center;
+        margin-right: 6.8rem;
+        opacity: unset;
+        img {
+          margin: 0 auto;
+          margin-bottom: 1.6rem;
+        }
+
+        p {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.6rem;
+          line-height: 28px;
+          color: $dark;
+          font-size: 1.6rem;
+          max-width: 48rem;
+          margin: auto;
+          text-align: center;
+          padding-bottom: 2.4rem;
+          border-bottom: 2px solid $grey;
+          margin-bottom: 1.3rem;
+          opacity: 0.7;
+        }
+
+        .user-details {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          margin: auto;
+          justify-content: center;
+
+          img {
+            margin: 0;
+          }
+
+          span {
+            display: inline-block;
+            font-weight: 600;
+            font-size: 1.4rem;
+            line-height: 20px;
+            color: $dark;
+          }
+        }
+      }
+    }
+  }
+}

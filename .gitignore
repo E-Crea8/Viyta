@@ -1,0 +1,5 @@
+# ================= #
+# IGNORE NODE MODULES #
+# ================= #
+
+/[Nn]ode_modules/

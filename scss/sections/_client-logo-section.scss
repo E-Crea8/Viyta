@@ -1,0 +1,15 @@
+// Client Logo styles here
+
+@use "./../components/colors" as *;
+@use "./../components/media-queries" as *;
+
+.logo-box {
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 16.5rem;
+  }
+}

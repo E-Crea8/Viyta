@@ -1,0 +1,38 @@
+// Import all the components
+@use "./components/general";
+@use "./components/colors";
+@use "./components/top-bar";
+@use "./components/buttons";
+
+// Import all the sections
+@use "./sections/navbar";
+@use "./sections/footer";
+@use "./sections/general-sections";
+@use "./sections/two-column-section";
+@use "./sections/three-column-section";
+@use "./sections/social-media";
+@use "./sections/product-cat";
+@use "./sections/trending-products";
+@use "./sections/testimonial-section";
+@use "./sections/blogpost-section";
+
+// Woocommerce Shop Page styles here
+@use "./sections/shop";
+@use "./sections/single-product";
+@use "./sections/cart";
+@use "./sections/checkout";
+@use "./sections/thank-you";
+
+// About us page styles
+@use "./sections/client-logo-section";
+@use "./sections/two-cols-image-section";
+@use "./sections/cta-section";
+
+// Category Links Sections
+@use "./sections/cat-links";
+
+// Contact us page styles
+@use "./sections/contact";
+
+// Help page styles
+@use "./sections/help-post";

@@ -1,0 +1,210 @@
+// Contact styles here
+@use "./../components/colors" as *;
+@use "./../components/media-queries" as *;
+
+.main-contact-box {
+  position: relative;
+  // CONTACT INFO HERE
+  .gm-style {
+    min-height: 54.2rem;
+  }
+
+  .contact-info-box {
+    display: block;
+    padding: 4rem !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 35.5rem;
+    background: $white;
+    color: $dark;
+    margin: 4rem 8rem !important;
+
+    h2 {
+      font-weight: 700;
+      font-size: 2.4rem;
+      line-height: 32px;
+      margin-bottom: 2.4rem;
+    }
+
+    h4 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 30px;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 28px;
+      opacity: 0.7;
+      margin-bottom: 0;
+    }
+
+    .address-box {
+      margin-bottom: 2.4rem;
+
+      .location-info {
+        display: flex;
+        gap: 4px;
+
+        &::before {
+          content: url("https://woocommerce-869479-3348306.cloudwaysapps.com/wp-content/uploads/2023/04/Location-icon.svg");
+          height: 14px;
+          width: 14px;
+          display: flex;
+          align-items: center;
+          margin-top: 8px;
+        }
+      }
+    }
+
+    .support-box {
+      margin-bottom: 2.4rem;
+
+      .email-info {
+        display: flex;
+        gap: 4px;
+
+        &::before {
+          content: url("https://woocommerce-869479-3348306.cloudwaysapps.com/wp-content/uploads/2023/04/Email-Open-icon.svg");
+          height: 14px;
+          width: 14px;
+          display: flex;
+          align-items: center;
+          margin-top: 8px;
+        }
+      }
+
+      .phone-info {
+        margin-bottom: 0;
+
+        display: flex;
+        gap: 4px;
+
+        &::before {
+          content: url("https://woocommerce-869479-3348306.cloudwaysapps.com/wp-content/uploads/2023/04/Phone-icon.svg");
+          height: 14px;
+          width: 14px;
+          display: flex;
+          align-items: center;
+          margin-top: 8px;
+        }
+      }
+    }
+
+    .opening-hours-box {
+      .time-info {
+        display: flex;
+        gap: 4px;
+
+        &::before {
+          content: url("https://woocommerce-869479-3348306.cloudwaysapps.com/wp-content/uploads/2023/04/Clock-icon.svg");
+          height: 14px;
+          width: 14px;
+          display: flex;
+          align-items: center;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+  // CONTACT FORM STYLES
+  .contact-form-section {
+    h2 {
+      max-width: 48rem;
+      line-height: 60px;
+      margin-bottom: 2.4rem;
+    }
+
+    p {
+      max-width: 48rem;
+      line-height: 2.8rem;
+      margin: 0 auto;
+      margin-bottom: 4.8rem;
+    }
+
+    #contact-form {
+      max-width: 48rem;
+
+      .form-row {
+        display: block;
+        margin-bottom: 2rem;
+
+        .column-full {
+          max-width: 48rem;
+          p {
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            color: $dark;
+            opacity: 0.7;
+            font-family: "Aileron", sans-serif;
+            margin-bottom: 0;
+
+            span {
+              input[type="text"],
+              input[type="email"],
+              textarea {
+                border: 1px solid $grey;
+                padding-bottom: 1.4rem;
+                padding-top: 1.4rem;
+                padding-left: 2.4rem;
+                background: transparent;
+                font-family: "Aileron", sans-serif;
+                width: 100%;
+              }
+
+              input::placeholder,
+              textarea::placeholder {
+                color: $dark;
+              }
+
+              input[type="text"]:focus,
+              input[type="email"]:focus,
+              textarea:focus {
+                border: 1px solid $secondary;
+              }
+            }
+          }
+        }
+      }
+
+      .form-row-submit {
+        max-width: 48rem;
+        .column-full {
+          margin: 0 auto;
+          text-align: center;
+          p {
+            margin-bottom: 0;
+            min-width: 52rem;
+
+            input[type="submit"] {
+              width: 100%;
+              display: inline-block;
+              padding: 1.2rem 4rem;
+              color: $white;
+              font-weight: 600;
+              font-size: 1.6rem;
+              line-height: 2.8rem;
+              background: $primary;
+              border-radius: 100px;
+              border: 0;
+              font-family: "Aileron", sans-serif;
+              cursor: pointer;
+              transition: all 0.3s;
+
+              &:hover {
+                background: $secondary;
+              }
+            }
+
+            span {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

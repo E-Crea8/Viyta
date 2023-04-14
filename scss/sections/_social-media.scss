@@ -1,0 +1,27 @@
+// Two Column Section styles here
+
+@use "./../components/colors" as *;
+@use "./../components/media-queries" as *;
+
+.container.two-column {
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 28px;
+    color: $dark;
+    margin-bottom: 4rem;
+    font-size: 1.6rem;
+  }
+
+  .social-buttons {
+    a {
+      display: inline-block;
+      font-size: 1.6rem;
+    }
+
+    a.button-no-bg {
+      background: none;
+    }
+  }
+}

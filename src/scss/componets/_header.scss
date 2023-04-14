@@ -1,0 +1,412 @@
+#bullshark-top-bar {
+  height: 40px;
+  width: auto;
+  display: block;
+  text-align: center;
+  .bullshark-l-slot,
+  .bullshark-r-slot,
+  .bullshark-m-slot {
+    font-size: 14px;
+    line-height: 1.5;
+    height: 40px;
+    > * {
+      display: inline-block;
+    }
+    .bullshark-searchform .bullshark-searchform-opener {
+      line-height: 40px;
+    }
+  }
+  .bullshark-l-slot {
+    left: 15px;
+  }
+  .bullshark-m-slot {
+    left: 0;
+  }
+  .bullshark-cart-icon {
+    margin: 9px 0;
+    position: relative;
+    .bullshark-cart-count {
+      top: -5px;
+    }
+  }
+}
+
+.bullshark-l-slot,
+.bullshark-r-slot {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  top: 0;
+  z-index: 1001;
+  > * {
+    vertical-align: top;
+    display: inline-block;
+  }
+}
+.bullshark-m-slot {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  justify-content: center;
+}
+.bullshark-l-slot {
+  left: 15px;
+  .bullshark-searchform .bullshark-search-input-wrapper.active {
+    right: auto;
+    left: 0;
+  }
+}
+.bullshark-r-slot {
+  right: 15px;
+}
+
+.bullshark-l-slot,
+.bullshark-r-slot,
+.bullshark-m-slot {
+  .bullshark-button {
+    padding: 5px 20px;
+    margin: 0 3px;
+  }
+}
+
+.search-form {
+  .bullshark-m-slot > label {
+    display: inline-block;
+  }
+}
+
+.bullshark-header-logo {
+  display: block;
+  line-height: 1;
+}
+
+#bullshark-main-header {
+  position: relative;
+  z-index: 9999;
+  @extend .header-box-shadow;
+  .bullshark-header-layout-1,
+  .bullshark-header-layout-2 {
+    .bullshark-main-navigation {
+      text-align: center;
+    }
+  }
+  .bullshark-header-layout-1 {
+    .site-description {
+      text-align: center;
+    }
+  }
+  .bullshark-header-layout-1
+    #bullshark-header-main-area
+    .bullshark-header-logo-wrapper {
+    margin: 0 auto;
+  }
+  .bullshark-header-layout-3,
+  .bullshark-header-layout-4 {
+    .bullshark-r-slot {
+      top: 50%;
+      z-index: 2;
+      @include transform(translate(0, -50%));
+    }
+    .bullshark-main-menu {
+      margin-top: -1px;
+    }
+    .bullshark-cart-icon {
+      display: initial;
+      line-height: 45px;
+      .bullshark-cart-count {
+        top: -5px;
+      }
+    }
+  }
+  .bullshark-header-layout-3 {
+    .bullshark-header-logo-wrapper {
+      display: flex;
+      width: 100%;
+    }
+    .bullshark-main-menu {
+      margin: 0 30px;
+    }
+    .bullshark-l-slot {
+      position: relative;
+      left: auto;
+      height: 100%;
+      display: flex;
+    }
+  }
+  .bullshark-header-layout-4 {
+    .bullshark-header-logo-wrapper {
+      width: 100%;
+    }
+    .bullshark-main-navigation-wrapper {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+      text-align: center;
+      .bullshark-main-navigation {
+        display: inline-block;
+      }
+    }
+    .bullshark-logo-wrapper {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      z-index: 2;
+      @include transform(translate(0, -50%));
+    }
+    .bullshark-l-slot > *,
+    .bullshark-r-slot > * {
+      vertical-align: middle;
+    }
+    .bullshark-l-slot {
+      position: relative;
+      left: auto;
+      display: inline-block;
+      .bullshark-searchform .bullshark-search-input-wrapper.active {
+        left: 0;
+        right: auto;
+        &.right {
+          left: auto;
+          right: -5px;
+        }
+      }
+    }
+  }
+  .bullshark-header-layout-5 {
+    .bullshark-main-navigation {
+      text-align: left;
+    }
+    .bullshark-l-slot {
+      position: relative;
+    }
+  }
+  .bullshark-header-layout-6 {
+    #bullshark-header-main-area {
+      display: flex;
+      justify-content: space-between;
+    }
+    .bullshark-l-slot,
+    .bullshark-r-slot {
+      position: relative;
+      left: initial;
+      right: initial;
+    }
+    .bullshark-main-navigation {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+#bullshark-header-main-area {
+  .bullshark-header-logo-wrapper {
+    height: 100%;
+    display: table;
+    .bullshark-header-logo {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  .bullshark-l-slot .bullshark-button,
+  .bullshark-m-slot .bullshark-button,
+  .bullshark-r-slot .bullshark-button {
+    padding: 10px 20px;
+  }
+}
+
+#bullshark-bottom-area {
+  border-top: 1px solid $gray-lighter;
+  .bullshark-menu-social {
+    li {
+      margin: 0;
+      line-height: 47px;
+    }
+  }
+  .bullshark-custom-cart {
+    line-height: 47px;
+  }
+}
+
+.bullshark-header-logo-wrapper {
+  line-height: 1;
+}
+
+#bullshark-sticky-header {
+  visibility: hidden;
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  @extend .header-box-shadow;
+  @include transition(top 0.4s ease-in-out);
+  .container {
+    display: table;
+  }
+  .bullshark-logo-wrapper {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    z-index: 2;
+    @include transform(translate(0, -50%));
+    .site-title {
+      line-height: 60px;
+      img {
+        max-height: 60px;
+      }
+    }
+  }
+  .bullshark-main-navigation-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    text-align: center;
+    height: 60px;
+    .bullshark-main-navigation {
+      display: inline-block;
+    }
+  }
+  .bullshark-main-menu {
+    line-height: 59px;
+  }
+  .bullshark-r-slot {
+    top: 50%;
+    z-index: 2;
+    @include transform(translate(0, -50%));
+  }
+  .bullshark-menu-social li {
+    margin: 17px 0;
+  }
+  .container .bullshark-searchform .bullshark-searchform-opener {
+    line-height: 60px;
+  }
+  .bullshark-cart-icon .bullshark-cart-count {
+    top: -4px;
+  }
+}
+
+.bullshark-sticky-header-on {
+  #bullshark-sticky-header {
+    top: 0;
+    visibility: visible;
+  }
+}
+.admin-bar {
+  .bullshark-sticky-header-on {
+    #bullshark-sticky-header {
+      top: 32px;
+    }
+  }
+}
+
+#bullshark-main-header {
+  .bullshark-searchform {
+    position: relative;
+    .bullshark-searchform-opener {
+      display: block;
+      padding: 0 10px;
+      font-size: 18px;
+      line-height: 47px;
+      &.active {
+        font-size: 35px;
+        .ion-ios-search-strong:before {
+          content: "\f404";
+        }
+      }
+    }
+    .bullshark-search-input-wrapper {
+      position: absolute;
+      top: -5000px;
+      right: 0;
+      width: 350px;
+      @include opacity(0);
+      @include box-shadow(0, 0, 15px, rgba(0, 0, 0, 0.07));
+      @include transition(opacity 0.2s ease-in-out);
+      &.active {
+        top: 99%;
+        left: -5px;
+        @include opacity(1);
+        &.right {
+          left: auto;
+          right: -5px;
+        }
+      }
+    }
+  }
+  .bullshark-r-slot
+    .bullshark-searchform
+    .bullshark-search-input-wrapper.active {
+    left: auto;
+    right: 0;
+  }
+  .bullshark-header-logo {
+    img {
+      vertical-align: middle;
+    }
+  }
+}
+
+span.site-title {
+  display: block;
+}
+.site-title {
+  line-height: 1;
+  margin: 0;
+}
+.site-description {
+  display: block;
+}
+
+#bullshark-responsive-header {
+  position: relative;
+  z-index: 9;
+  display: none;
+  height: 72px;
+  top: 0;
+  text-align: center;
+  @extend .header-box-shadow;
+  .bullshark-header-logo {
+    display: inline-block;
+    .site-title {
+      font-size: 72px;
+      line-height: 72px;
+    }
+  }
+  #menu-main-menu {
+    margin-bottom: 20px;
+  }
+}
+
+.bullshark-cart-icon {
+  vertical-align: middle;
+  display: table-cell;
+  height: 100%;
+  padding: 0 10px;
+  position: relative;
+  .bullshark-cart-count {
+    position: absolute;
+    top: 9px;
+    right: 1px;
+    font-size: 12px;
+    width: 15px;
+    line-height: 15px;
+    text-align: center;
+    border-radius: 50%;
+  }
+}
+
+.pulse {
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  border: none;
+  border-radius: 100%;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0.33, 0, 1);
+  animation: pulse 1.25s infinite cubic-bezier(0.66, 0.33, 0, 1);
+}

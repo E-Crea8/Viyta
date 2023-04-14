@@ -1,0 +1,21 @@
+// Media queries here - breakpoints
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@mixin tablet {
+  @media screen and (max-width: 59em) {
+    @content;
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@mixin mobile {
+  @media screen and (max-width: 34em) {
+    @content;
+  }
+}

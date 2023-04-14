@@ -1,0 +1,79 @@
+// Two Column Section styles here
+
+@use "./../components/colors" as *;
+@use "./../components/media-queries" as *;
+
+.container.three-column {
+  h2 {
+    font-weight: 900;
+    font-size: 4.8rem;
+    line-height: 60px;
+    text-align: center;
+    color: $dark;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 28px;
+    color: $dark;
+    margin: 0 auto;
+    // margin-bottom: 4rem;
+    font-size: 1.6rem;
+    max-width: 48rem;
+    text-align: center;
+  }
+
+  .col-goals {
+    h3 {
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 28px;
+      color: $dark;
+      margin: 0 auto;
+      margin-bottom: 4rem;
+      font-size: 1.6rem;
+      max-width: 34.6rem;
+      opacity: 0.7;
+      text-align: center;
+    }
+
+    &:nth-child(2) {
+      border-left: 1px solid #dedede;
+      border-right: 1px solid #dedede;
+    }
+
+    &:nth-child(4) {
+      border-bottom: 0 !important;
+
+      .rounded-box {
+        margin-top: 4rem;
+      }
+    }
+
+    &:nth-child(5) {
+      border-bottom: 0 !important;
+      border-left: 1px solid #dedede;
+      border-right: 1px solid #dedede;
+
+      .rounded-box {
+        margin-top: 4rem;
+      }
+    }
+
+    &:nth-child(6) {
+      border-bottom: 0 !important;
+
+      .rounded-box {
+        margin-top: 4rem;
+      }
+    }
+  }
+
+  // .benefits-section__title-row-2 .col-md-4:nth-child(2)
+}

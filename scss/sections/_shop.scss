@@ -1,0 +1,128 @@
+// shop page styles here
+
+@use "./../components/colors" as *;
+@use "./../components/media-queries" as *;
+
+.cat-box {
+  background: #f6f6f6;
+  .categories-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 2.4rem 0;
+
+    a:link,
+    a:visited {
+      display: inline-block;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 28px;
+      color: $dark;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:active {
+      color: $secondary;
+      text-decoration: underline;
+    }
+  }
+}
+
+p.woocommerce-result-count {
+  display: none;
+}
+
+form.woocommerce-ordering {
+  display: none;
+}
+
+.products-container {
+  ul.products {
+    display: grid;
+    // gap: 2.6rem;
+    row-gap: 40px;
+    column-gap: 26px;
+    grid-template-columns: repeat(4, 1fr);
+
+    li.product {
+      border: 1px solid $grey;
+      padding: 0 2.4rem 3.2rem;
+      margin: 0;
+      min-width: 28.2rem;
+
+      form.cart {
+        .quantity {
+          input[type="number"] {
+            max-width: 89px;
+          }
+        }
+
+        .add_to_cart_button {
+          max-width: 127px;
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+
+      img {
+        margin-bottom: 3.2rem;
+      }
+
+      h2 {
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 32px;
+        color: $dark;
+        margin-bottom: 1.2rem;
+      }
+
+      .woocommerce-product-description {
+        margin-bottom: 1.2rem;
+        p {
+          font-weight: 400;
+          font-size: 1.4rem;
+          line-height: 20px;
+          color: $dark;
+          opacity: 0.7;
+        }
+      }
+
+      .price {
+        display: block;
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 30px;
+        color: $dark;
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    form.cart {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      .quantity {
+        input[type="number"] {
+          // height: 48px;
+          border: 1.5px solid $grey;
+          border-radius: 100px;
+          padding: 14px 20px;
+          font-weight: 600;
+          font-size: 1.4rem;
+          line-height: 20px;
+          background: transparent;
+        }
+      }
+
+      a.add_to_cart_button {
+        display: inline-block;
+      }
+    }
+  }
+}

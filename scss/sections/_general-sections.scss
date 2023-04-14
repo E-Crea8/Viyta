@@ -1,0 +1,137 @@
+// General Section styles here
+
+@use "./../components/colors" as *;
+@use "./../components/media-queries" as *;
+
+// Extend flex reusables
+%align-center {
+  display: flex;
+  align-items: center;
+}
+
+// Follow us section
+.follow-us-section {
+  background: $white;
+  padding: 0 12rem;
+
+  h2 {
+    max-width: 52.2rem;
+    font-weight: 900;
+    line-height: 6rem;
+    margin-bottom: 2.4rem;
+  }
+
+  p {
+    line-height: 2.8rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .links-btn {
+    display: flex;
+    gap: 2.4rem;
+
+    .button-no-bg {
+      a {
+        background: transparent;
+        transition: all 0.3s;
+        color: $dark;
+        padding: 0;
+      }
+    }
+  }
+
+  .custom-column-sm {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    figure {
+      margin-bottom: 0;
+      width: 100%;
+    }
+  }
+}
+
+// SUBSCRIBE NEWSLETTER STYLES
+.subscribe-newsletter-section {
+  h2 {
+    max-width: 45.4rem;
+    line-height: 5rem;
+    margin-bottom: 2.4rem;
+  }
+
+  p {
+    max-width: 48rem;
+    line-height: 2.8rem;
+    margin: 0 auto;
+    margin-bottom: 4.8rem;
+  }
+
+  #subscribe-form {
+    max-width: 52rem;
+
+    .form-row {
+      display: flex;
+      gap: 4rem;
+      margin-bottom: 3.2rem;
+
+      .column-half {
+        p {
+          font-size: 1.6rem;
+          line-height: 2.8rem;
+          color: $dark;
+          opacity: 0.7;
+          font-family: "Aileron", sans-serif;
+          margin-bottom: 0;
+
+          span {
+            input[type="text"],
+            input[type="email"] {
+              border: 0;
+              border-bottom: 1px solid $grey;
+              padding-bottom: 1.2rem;
+              background: transparent;
+              font-family: "Aileron", sans-serif;
+              max-width: 24rem;
+            }
+          }
+        }
+      }
+    }
+
+    .form-row-submit {
+      min-width: 52rem;
+      .column-full {
+        margin: 0 auto;
+        text-align: center;
+        p {
+          margin-bottom: 0;
+          min-width: 52rem;
+
+          input[type="submit"] {
+            display: inline-block;
+            padding: 1.2rem 4rem;
+            color: $white;
+            font-weight: 600;
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            background: $primary;
+            border-radius: 100px;
+            border: 0;
+            font-family: "Aileron", sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+              background: $secondary;
+            }
+          }
+
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

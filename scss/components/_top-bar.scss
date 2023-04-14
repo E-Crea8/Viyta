@@ -1,0 +1,15 @@
+@use "./colors" as *;
+@use "./media-queries" as *;
+@use "./general" as *;
+
+#tpbr_topbar {
+  height: 40px;
+  background-color: $dark;
+
+  #tpbr_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+  }
+}

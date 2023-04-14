@@ -1,0 +1,23 @@
+// CTA Shop Section styles here
+
+@use "./../components/colors" as *;
+@use "./../components/media-queries" as *;
+
+.bg-image {
+  background: url("https://woocommerce-869479-3348306.cloudwaysapps.com/wp-content/uploads/2023/03/bg-shop.png");
+  background-color: $light;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  p {
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    opacity: 0.7;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 32px;
+    color: $dark;
+    max-width: 48rem;
+  }
+}

@@ -1,0 +1,126 @@
+// Footer styles here
+
+@use "./../components/colors" as *;
+@use "./../components/media-queries" as *;
+
+// Extend flex reusables
+%align-center {
+  display: flex;
+  align-items: center;
+}
+
+#colophon.site-footer {
+  width: 100%;
+  padding: 8rem 5rem 2.8rem 12rem;
+  background: $white;
+
+  .container {
+    // width: 100%;
+    max-width: 120.7rem;
+    margin: 0 auto;
+
+    .footer-container {
+      .widget-box {
+        figure {
+          margin-bottom: 2.4rem;
+        }
+
+        .contact-box {
+          margin-bottom: 0.8rem;
+          p {
+            margin-bottom: 0.8rem;
+
+            a {
+              color: $dark;
+              font-weight: 600;
+              font-size: 1.6rem;
+              line-height: 2.8rem;
+              transition: all 0.3s;
+              text-decoration: underline;
+
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+
+        .opening-box {
+          p {
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            color: $dark;
+            opacity: 0.7;
+          }
+        }
+
+        h3 {
+          font-weight: 600;
+          font-size: 1.8rem;
+          line-height: 3rem;
+          margin-bottom: 1.6rem;
+        }
+
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 1.2rem;
+
+          li {
+            max-width: 19.7rem;
+            a {
+              color: $dark;
+              font-weight: 400;
+              font-size: 1.6rem;
+              line-height: 2.8rem;
+              transition: all 0.3s;
+              text-decoration: none;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .hr-footer {
+      width: 120rem;
+      height: 0rem;
+      border: 1px solid $grey;
+      margin: 0 auto;
+      margin-top: 4.8rem;
+    }
+
+    .copyright-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2.4rem;
+
+      span {
+        display: inline-block;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        opacity: 0.7;
+      }
+
+      a {
+        display: inline-block;
+        transition: all 0.3s;
+
+        &:hover {
+          img {
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.152619);
+          }
+        }
+      }
+    }
+  }
+}

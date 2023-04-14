@@ -1,0 +1,46 @@
+.container {
+  position: relative;
+  width: $container-lg;
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+.container-small {
+  width: $container-sm;
+  max-width: 100%;
+}
+
+#bullshark-primary {
+  margin: 0 auto 70px;
+}
+
+#bullshark-primary-title {
+  margin-bottom: 40px;
+  margin-top: 60px;
+}
+
+.inner-section {
+  padding: 60px 0;
+}
+
+#bullshark-content {
+  margin: 50px 0;
+}
+
+.bullshark-ad {
+  a > img {
+    vertical-align: middle;
+  }
+}
+
+#bullshark-below-header-ad {
+  margin-top: 30px;
+}
+
+#bullshark-before-footer-ad {
+  margin-bottom: 40px;
+}
+
+a {
+  text-decoration: none;
+}

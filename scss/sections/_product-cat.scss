@@ -1,0 +1,81 @@
+// Product Section Section styles here
+
+@use "./../components/colors" as *;
+@use "./../components/media-queries" as *;
+
+.product-cat-section {
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 28px;
+    color: $dark;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    max-width: 48rem;
+    text-align: center;
+  }
+
+  .cat-block {
+    width: 100%;
+
+    .woocommerce.columns-5 {
+      overflow: hidden;
+
+      ul.products.columns-5 {
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        li {
+          margin: 0;
+          flex-grow: 1;
+          border-right: 1px solid $grey;
+          border-bottom: 1px solid $grey;
+
+          &:nth-child(5) {
+            border-right: 0;
+          }
+
+          a {
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 2.4rem;
+            line-height: 32px;
+            color: $dark;
+
+            img {
+              min-height: 38rem;
+              min-width: 28.9rem;
+            }
+
+            h2 {
+              padding: 8rem 2.4rem;
+              font-weight: 700;
+              font-size: 2.2rem;
+              line-height: 32px;
+              color: $dark;
+              min-height: 24.1rem;
+
+              &::after {
+                content: "Shop now";
+                display: block;
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 28px;
+                height: auto;
+                width: auto;
+                text-decoration: underline;
+                margin-top: 2.4rem;
+              }
+
+              .count {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

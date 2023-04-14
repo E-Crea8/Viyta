@@ -1,0 +1,780 @@
+@use "./colors" as *;
+@use "./media-queries" as *;
+
+// SETUP THE GENERAL THEME FILES
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- 02 COLORS
+
+// - Primary: #f27178;
+//  - Secondary - #fcc279;
+
+// - dark: #000000;
+// - White: #FFFFFF;
+
+// - Grey - #dedede;
+
+
+--- 05 SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--- 06 BORDER-RADIUS
+
+Default: 9px
+Medium: 11px
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+// Headings Styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Aileron", sans-serif;
+}
+
+h1 {
+  font-size: 5.5rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.6rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin-top: 0 !important;
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  @include tablet {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+
+  overflow-x: hidden;
+}
+
+/**************************/
+/* GENRAL REUSABLE COMPONENTS */
+/**************************/
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.cover-container {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+.container-full-width {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.full-width-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wp-block-bullshark-bullshark-container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+.grid-no-gap {
+  display: grid;
+}
+
+.g-gap-24 {
+  column-gap: 24px;
+}
+
+.col-gap-26 {
+  column-gap: 26px;
+}
+
+.col-gap-80 {
+  column-gap: 80px;
+}
+
+.row-gap-40 {
+  row-gap: 40px;
+}
+
+.grid-footer {
+  display: grid;
+  // column-gap: 6.4rem;
+  // row-gap: 9.6rem;
+  justify-content: space-between;
+
+  /* margin-bottom: 9.6rem; */
+}
+
+/* .grid:last-child {
+  margin-bottom: 0;
+} */
+
+// .grid:not(:last-child) {
+//   margin-bottom: 9.6rem;
+// }
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-gap-10 {
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.grid-align-center {
+  align-items: center;
+}
+
+.col-gap-120 {
+  column-gap: 12rem;
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #333;
+  /* color: #45260a; */
+  /* color: #343a40; */
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+
+  /* Only necessary for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  /* Put transition on original "state" */
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+
+  /* border: 3px solid #fff; */
+
+  /* Trick to add border inside */
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
+*:focus {
+  outline: none;
+  /* outline: 4px dotted #e67e22; */
+  /* outline-offset: 8px; */
+  // box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
+/* HELPER/SETTINGS CLASSES */
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+strong {
+  font-weight: 500;
+}
+
+// contact form 7 styles
+.form-grid {
+  display: grid;
+  gap: 2.4rem;
+
+  /* margin-bottom: 9.6rem; */
+}
+
+.full-width {
+  width: 100%;
+}
+
+.d-none {
+  display: none;
+}
+
+.fw-600 {
+  font-weight: 600;
+
+  a {
+    font-weight: 600;
+  }
+}
+
+.has-underline {
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.no-underline {
+  a {
+    text-decoration: none;
+    opacity: 0.7;
+
+    &:hover {
+      text-decoration: underline;
+      opacity: unset;
+    }
+  }
+}
+
+a.has-underline {
+  text-decoration: underline;
+  transition: 0.3s;
+  color: $dark;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+a.no-underline {
+  text-decoration: none;
+  opacity: 0.7;
+  transition: 0.3s;
+  color: $dark;
+
+  &:hover {
+    text-decoration: underline;
+    opacity: unset;
+  }
+}
+
+.mw-570 {
+  max-width: 57rem;
+}
+
+.mw-560 {
+  max-width: 56rem;
+}
+
+.mw-520 {
+  max-width: 52rem;
+}
+
+.mw-480 {
+  max-width: 48rem;
+}
+
+.mw-454 {
+  max-width: 45.4rem;
+}
+
+.h-94 {
+  height: 9.4rem;
+}
+
+.mw-386 {
+  max-width: 38.6rem;
+}
+
+.mw-417 {
+  max-width: 41.7rem;
+}
+
+.mw-500 {
+  max-width: 50rem;
+}
+
+.mw-520 {
+  max-width: 52rem;
+}
+
+.mw-553 {
+  max-width: 55.3rem;
+}
+
+.mw-346 {
+  max-width: 34.6rem;
+}
+
+.mb-24 {
+  margin-bottom: 2.4rem;
+}
+
+.mb-40 {
+  margin-bottom: 4rem;
+}
+
+.mb-48 {
+  margin-bottom: 4.8rem;
+}
+
+.pl-100 {
+  padding-left: 10rem;
+}
+
+.p-tb-40 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.p-tb-48 {
+  padding-top: 4.8rem;
+  padding-bottom: 4.8rem;
+}
+
+.p-tb-80 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.p-tb-120 {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
+.pr-64 {
+  padding-right: 6.4rem;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.m-auto {
+  margin: 0 auto;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.p-lr-20 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.pt-20 {
+  padding-top: 2rem;
+}
+
+.rounded-box {
+  border: 1px solid $grey;
+  padding: 32px;
+  border-radius: 100px;
+  max-width: 100px;
+  max-height: 100px;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+.mb-12 {
+  margin-bottom: 1.2rem;
+}
+
+.op-07 {
+  opacity: 0.7;
+}
+
+.b-lr {
+  border-left: 1px solid $grey;
+  border-right: 1px solid $grey;
+}
+
+.border-bottom {
+  border-bottom: 1px solid $grey;
+}
+
+.padding-32 {
+  padding: 0 3.2rem;
+}
+
+.no-flex-gap {
+  gap: 0;
+}
+
+.pt-40 {
+  padding-top: 4rem;
+}
+
+.mt-40 {
+  margin-top: 4rem;
+}
+
+.col-goals {
+  transition: all 0.3s;
+
+  &:hover {
+    .rounded-box {
+      border: 1px solid $secondary;
+    }
+  }
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+.flex-grow {
+  flex-grow: 1 !important;
+
+  figure {
+    img {
+      min-width: 100%;
+    }
+  }
+}
+
+.gap-24 {
+  gap: 2.4rem;
+}
+
+.bg-light {
+  background: $light;
+}
+
+.h-80 {
+  height: 80px;
+}
+
+.h-120 {
+  height: 120px;
+}
+
+.h-100 {
+  height: 100px;
+}
+
+.h-48 {
+  height: 48px;
+}
+
+.h-32 {
+  height: 32px;
+}
+
+.h-64 {
+  height: 64px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.p-lr-120 {
+  padding: 0 12rem;
+}
+
+.j-flex-end {
+  justify-content: flex-end;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.breadcrumbs-box {
+  padding: 1.2rem 0;
+}
+
+.border-tb {
+  border-top: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+}
+
+.woocommerce-breadcrumb {
+  display: none;
+}
+
+.overflow-hide {
+  overflow: hidden;
+}
+
+.border-top {
+  border-top: 1px solid $grey;
+}
+
+// #page.site {
+//   position: relative;
+// }
+
+// Woocommerce notifications style
+.woocommerce-message {
+  padding: 1.8rem;
+  color: $white;
+  font-size: 1.8rem;
+  padding-left: 1.2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  border: 1px solid $grey;
+  padding: 2.4rem;
+  margin-top: 8px;
+}
+
+.woocommerce-info {
+  padding: 1.8rem;
+  color: $white;
+  font-size: 1.8rem;
+  padding-left: 1.2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 2.4rem;
+  margin-top: 8px;
+}
+
+.return-to-shop {
+  padding: 2.4rem;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    padding: 1.2rem 4rem;
+    color: $white;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    background: $primary;
+    border-radius: 100px;
+    text-decoration: none;
+    border: 0;
+    font-family: "Aileron", sans-serif;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 0 auto;
+
+    &:hover {
+      background: $secondary;
+    }
+  }
+}
